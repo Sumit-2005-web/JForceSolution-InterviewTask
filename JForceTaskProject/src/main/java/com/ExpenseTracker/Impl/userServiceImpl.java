@@ -1,0 +1,34 @@
+package com.ExpenseTracker.Impl;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ExpenseTracker.Entity.User;
+import com.ExpenseTracker.Repository.userRepo;
+import com.ExpenseTracker.Service.userService;
+
+@Service
+public class userServiceImpl implements userService{
+
+	@Autowired
+	private userRepo usrepo;
+
+	@Override
+	public void registerUser(User user) {
+		// TODO Auto-generated method stub
+		usrepo.save(user);
+	}
+
+	@Override
+	public Optional<User> loginUser(String userName, String password) {
+		// TODO Auto-generated method stub
+		return usrepo.findByUserName(userName)
+                .filter(user -> user.getPassword().equals(password));
+	}
+	
+	
+	
+	
+}

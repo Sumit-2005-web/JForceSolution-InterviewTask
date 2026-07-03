@@ -1,0 +1,5 @@
+package com.ExpenseTracker.Entity;
+
+public class User {
+
+}

@@ -1,0 +1,46 @@
+package com.ExpenseTracker.Entity;
+
+import java.time.LocalDate;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+
+@Entity
+public class Expense {
+	  @Column
+	  private String expenseName;
+	   @Column
+	  private double amount;
+	   @Column
+	  private LocalDate date;
+	   @Column
+	  private String description;
+	   public String getExpenseName() {
+		   return expenseName;
+	   }
+	   public void setExpenseName(String expenseName) {
+		   this.expenseName = expenseName;
+	   }
+	   public double getAmount() {
+		   return amount;
+	   }
+	   public void setAmount(double amount) {
+		   this.amount = amount;
+	   }
+	   public LocalDate getDate() {
+		   return date;
+	   }
+	   public void setDate(LocalDate date) {
+		   this.date = date;
+	   }
+	   public String getDescription() {
+		   return description;
+	   }
+	   public void setDescription(String description) {
+		   this.description = description;
+	   }
+	   
+	   
+	   
+	   
+}

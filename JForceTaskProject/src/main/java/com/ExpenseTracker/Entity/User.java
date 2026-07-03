@@ -1,0 +1,61 @@
+package com.ExpenseTracker.Entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class User {
+
+	@Id
+	@Column
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	private int userId;
+  @Column
+ private String userName;
+  @Column
+ private String password;
+  @Column
+ private String emailId;
+  @Column
+ private String fullName;
+  
+  
+  
+  
+  public int getUserId() {
+	return userId;
+}
+  public void setUserId(int userId) {
+	this.userId = userId;
+  }
+  public String getUserName() {
+	return userName;
+  }
+  public void setUserName(String userName) {
+	this.userName = userName;
+  }
+  public String getPassword() {
+	return password;
+  }
+  public void setPassword(String password) {
+	this.password = password;
+  }
+  public String getEmailId() {
+	return emailId;
+  }
+  public void setEmailId(String emailId) {
+	this.emailId = emailId;
+  }
+  public String getFullName() {
+	return fullName;
+  }
+  public void setFullName(String fullName) {
+	this.fullName = fullName;
+  }
+  
+  
+	
+}
